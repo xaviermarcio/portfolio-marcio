@@ -15,6 +15,14 @@
     <meta property="og:image" content="assets/images/perfil.JPG" />
     <meta property="og:type" content="website" />
 
+    <!-- Segurança extra -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data: https://*; style-src 'self' 'unsafe-inline' https://*; script-src 'self' 'unsafe-inline' https://*;" />
     <!-- Fonte Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -155,10 +163,10 @@
               <i class="bi bi-instagram text-pink-500"></i>
               <a href="https://instagram.com/marcioxavierbsb" target="_blank" class="hover:underline">@marcioxavierbsb</a>
             </li>
-            <li class="flex items-center gap-2">
+            <!--<li class="flex items-center gap-2">
               <i class="bi bi-phone-fill text-green-600"></i>
               <span>(61) 99247-9855</span>
-            </li>
+            </li>-->
             <li class="flex items-center gap-2">
               <i class="bi bi-geo-alt-fill text-red-500"></i>
               <span>Brasília - DF</span>
@@ -169,137 +177,178 @@
         <!-- Formação -->
         <div class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="300">
           <h2 class="uppercase tracking-wide text-primary font-bold mb-4 flex items-center gap-2">
-            <i class="bi bi-mortarboard"></i>
+            <i class="bi bi-mortarboard-fill text-blue-600"></i>
             Formação Acadêmica
           </h2>
-          <ul class="space-y-3 text-sm text-justify">
-            <li>
-              <strong>Bacharelado:</strong>
-              Sistemas de Informação — UDF (2020)
-            </li>
-            <li>
-              <strong>Pós-graduação:</strong>
-              Banco de Dados & BI — Senac (2023)
-            </li>
-            <li>
-              <strong>Pós-graduação:</strong>
-              Ciência de Dados — Gran Faculdade (2025)
-            </li>
-            <li>
-              <strong>Pós-graduação:</strong>
-              Segurança da Informação — Gran Faculdade (2025)
-            </li>
-          </ul>
+          <div class="space-y-3 text-sm text-gray-700">
+            <div class="flex items-start">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              <span>
+                <strong>Bacharelado:</strong>
+                Sistemas de Informação — UDF (2020)
+              </span>
+            </div>
+
+            <div class="flex items-start">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              <span>
+                <strong>Pós-graduação:</strong>
+                Banco de Dados &amp; BI — Senac (2023)
+              </span>
+            </div>
+
+            <div class="flex items-start">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              <span>
+                <strong>Pós-graduação:</strong>
+                Ciência de Dados — Gran Faculdade (2025)
+              </span>
+            </div>
+
+            <div class="flex items-start">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              <span>
+                <strong>Pós-graduação:</strong>
+                Segurança da Informação — Gran Faculdade (2025)
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- EXPERIÊNCIA PROFISSIONAL COMPLETA -->
-<section class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="500">
-  <h2 class="uppercase tracking-wide text-primary font-bold mb-6 flex items-center gap-2">
-    <i class="bi bi-briefcase-fill"></i>
-    Experiência Profissional
-  </h2>
-  <div class="space-y-6 text-sm text-justify">
+      <div class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="uppercase tracking-wide text-primary font-bold mb-6 flex items-center gap-2">
+          <i class="bi bi-briefcase-fill text-blue-600"></i>
+          Experiência Profissional
+        </h2>
+        <div class="space-y-6 text-sm text-justify">
+          <div>
+            <h3 class="flex items-center font-semibold text-lg text-gray-800">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              Desenvolvedor — Projetos Próprios (2023 – Atual)
+            </h3>
+            <p class="text-gray-700">
+              Desenvolvimento de sistemas web completos para
+              <strong>resolver problemas práticos de negócios</strong>
+              , automatizar rotinas e oferecer
+              <strong>soluções sob medida</strong>
+              . Interfaces modernas e responsivas com HTML5, Tailwind CSS e Bootstrap, funcionalidades dinâmicas em JavaScript (ES6+), integração com APIs e back-end em Python. Uso intensivo de
+              Firebase (Auth, Firestore e Realtime Database) e automação com EmailJS. Além disso, atuação com
+              <strong>Power BI</strong>
+              para dashboards interativos e análise de dados, fornecendo
+              <strong>insights estratégicos</strong>
+              para apoio na tomada de decisões.
+            </p>
+            <p class="text-gray-700">
+              Experiência prática na
+              <strong>utilização e suporte a sistemas ERP de PDV</strong>
+              , incluindo
+              <strong>Maqplan</strong>
+              ,
+              <strong>Linear Sistemas</strong>
+              e
+              <strong>SyPDV</strong>
+              . Atuei diretamente no
+              <strong>uso operacional, implantação e acompanhamento</strong>
+              desses sistemas em ambientes de varejo, o que proporcionou uma visão ampliada sobre
+              <strong>gestão empresarial, integração de processos e automação</strong>
+              .
+            </p>
+          </div>
 
-    <div>
-      <h3 class="flex items-center font-semibold text-lg text-gray-800">
-        <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
-        Desenvolvedor — Projetos Próprios (2023 – Atual)
-      </h3>
-      <p class="text-gray-700">
-        Desenvolvimento de sistemas web completos para
-        <strong>resolver problemas práticos de negócios</strong>, automatizar rotinas e oferecer
-        <strong>soluções sob medida</strong>. Interfaces modernas e responsivas com HTML5, Tailwind CSS e Bootstrap,
-        funcionalidades dinâmicas em JavaScript (ES6+), integração com APIs e back-end em Python. Uso intensivo de
-        Firebase (Auth, Firestore e Realtime Database) e automação com EmailJS. Além disso, atuação com
-        <strong>Power BI</strong> para dashboards interativos e análise de dados, fornecendo
-        <strong>insights estratégicos</strong> para apoio na tomada de decisões.
-      </p>
-      <p class="text-gray-700">
-        Experiência prática na <strong>utilização e suporte a sistemas ERP de PDV</strong>, incluindo
-        <strong>Maqplan</strong>, <strong>Linear Sistemas</strong> e <strong>SyPDV</strong>. Atuei diretamente no
-        <strong>uso operacional, implantação e acompanhamento</strong> desses sistemas em ambientes de varejo,
-        o que proporcionou uma visão ampliada sobre <strong>gestão empresarial, integração de processos e automação</strong>.
-      </p>
-    </div>
+          <hr class="border-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full" />
 
-    <hr class="border-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full">
+          <div>
+            <h3 class="flex items-center font-semibold text-lg text-gray-800">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              Analista de Sistemas — Globalweb Outsourcing | Telebras (2021 – 2023)
+            </h3>
+            <p class="text-gray-700">
+              Atuação na empresa
+              <strong>Telecomunicações Brasileiras - TELEBRAS</strong>
+              como
+              <strong>Analista de Sistemas / Desenvolvedor Fullstack</strong>
+              , com desenvolvimento e manutenção de sistemas corporativos em
+              <strong>PHP, JavaScript, jQuery, Ajax, HTML5, CSS3 e Bootstrap</strong>
+              . Experiência em
+              <strong>administração de bancos de dados MySQL</strong>
+              , aplicação de
+              <strong>metodologias ágeis (Kanban)</strong>
+              e versionamento de código com
+              <strong>Git e TortoiseSVN</strong>
+              .
+            </p>
+          </div>
 
-    <div>
-      <h3 class="flex items-center font-semibold text-lg text-gray-800">
-        <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
-        Analista de Sistemas — Globalweb Outsourcing | Telebras (2021 – 2023)
-      </h3>
-      <p class="text-gray-700">
-        Atuação na empresa <strong>Telecomunicações Brasileiras - TELEBRAS</strong> como
-        <strong>Analista de Sistemas / Desenvolvedor Fullstack</strong>, com desenvolvimento e manutenção de sistemas
-        corporativos em <strong>PHP, JavaScript, jQuery, Ajax, HTML5, CSS3 e Bootstrap</strong>. Experiência em
-        <strong>administração de bancos de dados MySQL</strong>, aplicação de <strong>metodologias ágeis (Kanban)</strong>
-        e versionamento de código com <strong>Git e TortoiseSVN</strong>.
-      </p>
-    </div>
+          <hr class="border-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full" />
 
-    <hr class="border-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full">
+          <div>
+            <h3 class="flex items-center font-semibold text-lg text-gray-800">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              Estagiário — Dataprev - Empresa de Tecnologia e Informações da Previdência Social (2017 – 2018)
+            </h3>
+            <p class="text-gray-700">
+              Apoio na análise de processos em sistemas de grande porte. Relatórios gerenciais, indicadores de desempenho e suporte técnico. Automação de relatórios no pacote Office avançado.
+            </p>
+          </div>
 
-    <div>
-      <h3 class="flex items-center font-semibold text-lg text-gray-800">
-        <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
-        Estagiário — Dataprev - Empresa de Tecnologia e Informações da Previdência Social (2017 – 2018)
-      </h3>
-      <p class="text-gray-700">
-        Apoio na análise de processos em sistemas de grande porte. Relatórios gerenciais, indicadores de desempenho e suporte técnico. Automação de relatórios no pacote Office avançado.
-      </p>
-    </div>
+          <hr class="border-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full" />
 
-    <hr class="border-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full">
+          <div>
+            <h3 class="flex items-center font-semibold text-lg text-gray-800">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              Estagiário — Semob - Secretaria de Transporte e Mobilidade do DF (2016 – 2017)
+            </h3>
+            <p class="text-gray-700">
+              Desenvolvimento
+              <strong>front-end</strong>
+              com HTML5, CSS3 e JavaScript. Participação em projetos de modernização de sistemas legados.
+            </p>
+          </div>
 
-    <div>
-      <h3 class="flex items-center font-semibold text-lg text-gray-800">
-        <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
-        Estagiário — Semob - Secretaria de Transporte e Mobilidade do DF (2016 – 2017)
-      </h3>
-      <p class="text-gray-700">
-        Desenvolvimento <strong>front-end</strong> com HTML5, CSS3 e JavaScript. Participação em projetos de modernização de sistemas legados.
-      </p>
-    </div>
+          <hr class="border-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full" />
 
-    <hr class="border-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full">
+          <div>
+            <h3 class="flex items-center font-semibold text-lg text-gray-800">
+              <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+              Auxiliar de CPD — Big Box Supermercados (2011 – 2016)
+            </h3>
+            <p class="text-gray-700">
+              Atuação com
+              <strong>ERP Lumi Software</strong>
+              . Suporte a usuários, manutenção de estações, impressoras e rede. Rotinas de backup e segurança de dados em ambiente corporativo 24/7.
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <div>
-      <h3 class="flex items-center font-semibold text-lg text-gray-800">
-        <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
-        Auxiliar de CPD — Big Box Supermercados (2011 – 2016)
-      </h3>
-      <p class="text-gray-700">
-        Atuação com <strong>ERP Lumi Software</strong>. Suporte a usuários, manutenção de estações, impressoras e rede.
-        Rotinas de backup e segurança de dados em ambiente corporativo 24/7.
-      </p>
-    </div>
+      <!-- CERTIFICAÇÕES -->
+      <div class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="700">
+        <h2 class="uppercase tracking-wide text-primary font-bold mb-4 flex items-center gap-2">
+          <i class="bi bi-award-fill text-blue-600"></i>
+          Certificações
+        </h2>
+        <div class="space-y-3 text-sm text-gray-700">
+          <div class="flex items-start">
+            <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+            <span>
+              Information Technology Infrastructure Library -
+              <strong>ITIL 4 Foundation</strong>
+              — 2021
+            </span>
+          </div>
 
-  </div>
-</section>
-
-<!-- CERTIFICAÇÕES -->
-<section class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="700">
-  <h2 class="uppercase tracking-wide text-primary font-bold mb-4 flex items-center gap-2">
-    <i class="bi bi-award-fill"></i>
-    Certificações
-  </h2>
-  <div class="space-y-3 text-sm text-gray-700">
-
-    <div class="flex items-start">
-      <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
-      <span>Information Technology Infrastructure Library - <strong>ITIL 4 Foundation</strong> — 2021</span>
-    </div>
-
-    <div class="flex items-start">
-      <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
-      <span>Business Intelligence Foundation Professional - <strong>BIFPC</strong> — 2023</span>
-    </div>
-
-  </div>
-</section>
-
+          <div class="flex items-start">
+            <i class="bi bi-check-circle-fill text-blue-600 mr-2 text-base"></i>
+            <span>
+              Business Intelligence Foundation Professional -
+              <strong>BIFPC</strong>
+              — 2023
+            </span>
+          </div>
+        </div>
+      </div>
 
       <!-- PROJETOS -->
       <section id="projetos" class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="900">
