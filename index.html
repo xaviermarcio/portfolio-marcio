@@ -31,9 +31,19 @@
                 '0%, 100%': { backgroundPosition: '0% 50%' },
                 '50%': { backgroundPosition: '100% 50%' },
               },
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              pulseCustom: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.1)' },
+              },
             },
             animation: {
               gradient: 'gradient 3s ease infinite',
+              fadeIn: 'fadeIn 1s ease-out forwards',
+              pulseCustom: 'pulseCustom 1.5s infinite',
             },
           },
         },
@@ -52,70 +62,98 @@
       .typewriter {
         display: inline-block;
         overflow: hidden;
-        border-right: .15em solid #2563eb;
+        border-right: 0.15em solid #2563eb;
         white-space: nowrap;
-        animation: typing 3s steps(30, end), blink .75s step-end infinite;
+        animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
       }
-      @keyframes typing { from { width: 0 } to { width: 100% } }
-      @keyframes blink { 50% { border-color: transparent } }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
 
       /* Mobile - hover mais suave */
       @media (max-width: 768px) {
-        .hover\:scale-105:hover { transform: scale(1.02); }
-        .hover\:-translate-y-2:hover { transform: translateY(-4px); }
+        .hover\:scale-105:hover {
+          transform: scale(1.02);
+        }
+        .hover\:-translate-y-2:hover {
+          transform: translateY(-4px);
+        }
       }
     </style>
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans">
     <!-- Container -->
     <div class="max-w-4xl mx-auto p-6 space-y-10">
-      <!-- Hero -->
-      <section class="bg-white rounded-2xl shadow-lg p-10 text-center relative overflow-hidden" data-aos="fade-up">
+      <!-- HERO -->
+      <section class="bg-white rounded-2xl shadow-lg p-10 text-center relative overflow-hidden">
         <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-r from-primary/10 to-primary/5 rounded-t-2xl"></div>
-        <div class="relative flex justify-center">
+
+        <div class="relative flex justify-center opacity-0 animate-fadeIn delay-100">
           <img
             src="assets/images/perfil.JPG"
             alt="Foto de Márcio Xavier"
             class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover mt-6 transition-transform duration-500 hover:scale-110 hover:rotate-3" />
         </div>
-        <h1 class="mt-6 text-4xl md:text-5xl font-extrabold tracking-tight">
+
+        <h1 class="mt-6 text-4xl md:text-5xl font-extrabold tracking-tight opacity-0 animate-fadeIn delay-500">
           <span class="typewriter">Márcio Xavier</span>
         </h1>
-        <p class="text-gray-600 text-lg" data-aos="fade-up" data-aos-delay="200">Analista de Sistemas • BI • Dados • IA</p>
-        <p class="mt-6 text-gray-700 leading-relaxed text-justify max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
-          Trabalho com <strong>tecnologia</strong> para criar soluções práticas e eficientes que ajudam pessoas e empresas. Tenho experiência no
-          <strong>desenvolvimento de sistemas completos</strong>, da concepção à entrega, e busco constantemente aprimorar minhas habilidades para oferecer soluções modernas, seguras e escaláveis.
+
+        <p class="text-gray-600 text-lg opacity-0 animate-fadeIn delay-1000">Analista de Sistemas • BI • Dados • IA</p>
+
+        <p class="mt-6 text-gray-700 leading-relaxed text-justify max-w-2xl mx-auto opacity-0 animate-fadeIn delay-1500">
+          Trabalho com
+          <strong>tecnologia</strong>
+          para criar soluções práticas e eficientes que ajudam pessoas e empresas. Tenho experiência no
+          <strong>desenvolvimento de sistemas completos</strong>
+          , da concepção à entrega, e busco constantemente aprimorar minhas habilidades para oferecer soluções modernas, seguras e escaláveis.
         </p>
-        <p class="mt-3 text-gray-700 leading-relaxed text-justify max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="600">
-          Fora da área profissional, valorizo o equilíbrio com <strong>atividades físicas</strong>, sou apaixonado por
-          <strong>música — especialmente rock — e toco guitarra</strong>, além de manter o hábito de <strong>leitura</strong> sobre tecnologia e desenvolvimento pessoal, ampliando minha visão e inspiração no dia a dia.
+
+        <p class="mt-3 text-gray-700 leading-relaxed text-justify max-w-2xl mx-auto opacity-0 animate-fadeIn delay-2000">
+          Fora da área profissional, valorizo o equilíbrio com
+          <strong>atividades físicas</strong>
+          , sou apaixonado por
+          <strong>música — especialmente rock — e toco guitarra</strong>
+          , além de manter o hábito de
+          <strong>leitura</strong>
+          sobre tecnologia e desenvolvimento pessoal, ampliando minha visão e inspiração no dia a dia.
         </p>
       </section>
 
-      <!-- Contatos e Formação -->
+      <!-- CONTATOS e FORMAÇÃO -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Contatos -->
-        <div class="bg-white rounded-2xl shadow p-6 transition duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="100">
           <h2 class="uppercase tracking-wide text-primary font-bold mb-4 flex items-center gap-2">
             <i class="bi bi-telephone-forward"></i>
             Contatos
           </h2>
           <ul class="space-y-3 text-sm">
             <li class="flex items-center gap-2">
-              <i class="bi bi-envelope-fill text-primary transition-transform duration-300 hover:scale-125"></i>
+              <i class="bi bi-envelope-fill text-primary"></i>
               <a href="mailto:xaviermarcio80@gmail.com" class="hover:underline">xaviermarcio80@gmail.com</a>
             </li>
             <li class="flex items-center gap-2">
-              <i class="bi bi-github transition-transform duration-300 hover:rotate-12 hover:scale-125"></i>
-              <a href="https://github.com/xaviermarcio" target="_blank" rel="noopener noreferrer" class="hover:underline">github.com/xaviermarcio</a>
+              <i class="bi bi-github"></i>
+              <a href="https://github.com/xaviermarcio" target="_blank" class="hover:underline">github.com/xaviermarcio</a>
             </li>
             <li class="flex items-center gap-2">
-              <i class="bi bi-linkedin text-blue-600 transition-transform duration-300 hover:scale-125"></i>
-              <a href="https://www.linkedin.com/in/marcioxavierbsb/" target="_blank" rel="noopener noreferrer" class="hover:underline">linkedin.com/in/marcioxavierbsb</a>
+              <i class="bi bi-linkedin text-blue-600"></i>
+              <a href="https://www.linkedin.com/in/marcioxavierbsb/" target="_blank" class="hover:underline">linkedin.com/in/marcioxavierbsb</a>
             </li>
             <li class="flex items-center gap-2">
-              <i class="bi bi-instagram text-pink-500 transition-transform duration-300 hover:scale-125"></i>
-              <a href="https://instagram.com/marcioxavierbsb" target="_blank" rel="noopener noreferrer" class="hover:underline">@marcioxavierbsb</a>
+              <i class="bi bi-instagram text-pink-500"></i>
+              <a href="https://instagram.com/marcioxavierbsb" target="_blank" class="hover:underline">@marcioxavierbsb</a>
             </li>
             <li class="flex items-center gap-2">
               <i class="bi bi-phone-fill text-green-600"></i>
@@ -129,7 +167,7 @@
         </div>
 
         <!-- Formação -->
-        <div class="bg-white rounded-2xl shadow p-6 transition duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="300">
+        <div class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="300">
           <h2 class="uppercase tracking-wide text-primary font-bold mb-4 flex items-center gap-2">
             <i class="bi bi-mortarboard"></i>
             Formação Acadêmica
@@ -155,58 +193,87 @@
         </div>
       </section>
 
-      <!-- Experiência -->
-      <section class="bg-white rounded-2xl shadow p-6 transition duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="500">
-        <h2 class="uppercase tracking-wide text-primary font-bold mb-6 flex items-center gap-2">
-          <i class="bi bi-briefcase-fill"></i>
-          Experiência Profissional
-        </h2>
-        <div class="space-y-6 text-sm text-justify">
-          <div>
-            <h3 class="font-semibold">Desenvolvedor — Projetos Próprios (2023 – Atual)</h3>
-            <p class="text-gray-700">
-              Desenvolvimento de sistemas web completos para
-              <strong>resolver problemas práticos de negócios</strong>
-              , automatizar rotinas e oferecer
-              <strong>soluções sob medida</strong>
-              . Interfaces modernas e responsivas com HTML5, Tailwind CSS e Bootstrap, funcionalidades dinâmicas em JavaScript (ES6+), integração com APIs e back-end em Python. Uso intensivo de
-              Firebase (Auth, Firestore e Realtime Database) e automação com EmailJS. Além disso, atuação com
-              <strong>Power BI</strong>
-              para dashboards interativos e análise de dados, fornecendo
-              <strong>insights estratégicos</strong>
-              para apoio na tomada de decisões.
-            </p>
-          </div>
-          <div>
-            <h3 class="font-semibold">Analista de Sistemas — Globalweb Outsourcing / Telebras (2021 – 2023)</h3>
-            <p class="text-gray-700">
-              Atuação na
-              <strong>Telebras</strong>
-              com <strong>desenvolvimento fullstack</strong> e manutenção de sistemas corporativos em PHP, JavaScript, jQuery, Ajax, HTML5, CSS3 e Bootstrap. Administração de bancos MySQL, metodologias ágeis (Kanban),
-              versionamento com Git e TortoiseSVN.
-            </p>
-          </div>
-          <div>
-            <h3 class="font-semibold">Estagiário — Dataprev - Empresa de Tecnologia e Informações da Previdência Social (2017 – 2018)</h3>
-            <p class="text-gray-700">
-              Apoio na análise de processos em sistemas de grande porte. Relatórios gerenciais, indicadores de desempenho e suporte técnico. Automação de relatórios no pacote Office avançado.
-            </p>
-          </div>
-          <div>
-            <h3 class="font-semibold">Estagiário — Semob - Secretaria de Transporte e Mobilidade do DF (2016 – 2017)</h3>
-            <p class="text-gray-700">Desenvolvimento <strong>front-end</strong> com HTML5, CSS3 e JavaScript. Participação em projetos de modernização de sistemas legados.</p>
-          </div>
-          <div>
-            <h3 class="font-semibold">Auxiliar de CPD — Big Box Supermercados (2011 – 2016)</h3>
-            <p class="text-gray-700">
-              Atuação com <strong>ERP Lumi Software</strong>. Suporte a usuários, manutenção de estações, impressoras e rede. Rotinas de backup e segurança de dados em ambiente corporativo 24/7.
-            </p>
-          </div>
-        </div>
-      </section>
+      <!-- EXPERIÊNCIA PROFISSIONAL COMPLETA -->
+<section class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="500">
+  <h2 class="uppercase tracking-wide text-primary font-bold mb-6 flex items-center gap-2">
+    <i class="bi bi-briefcase-fill"></i>
+    Experiência Profissional
+  </h2>
+  <div class="space-y-6 text-sm text-justify">
 
-      <!-- Certificações -->
-      <section class="bg-white rounded-2xl shadow p-6 transition duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="700">
+    <div>
+      <h3 class="flex items-center font-semibold text-lg text-gray-800">
+        <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+        Desenvolvedor — Projetos Próprios (2023 – Atual)
+      </h3>
+      <p class="text-gray-700">
+        Desenvolvimento de sistemas web completos para
+        <strong>resolver problemas práticos de negócios</strong>, automatizar rotinas e oferecer
+        <strong>soluções sob medida</strong>. Interfaces modernas e responsivas com HTML5, Tailwind CSS e Bootstrap,
+        funcionalidades dinâmicas em JavaScript (ES6+), integração com APIs e back-end em Python. Uso intensivo de
+        Firebase (Auth, Firestore e Realtime Database) e automação com EmailJS. Além disso, atuação com
+        <strong>Power BI</strong> para dashboards interativos e análise de dados, fornecendo
+        <strong>insights estratégicos</strong> para apoio na tomada de decisões.
+      </p>
+      <p class="text-gray-700">
+        Experiência prática na <strong>utilização e suporte a sistemas ERP de PDV</strong>, incluindo
+        <strong>Maqplan</strong>, <strong>Linear Sistemas</strong> e <strong>SyPDV</strong>. Atuei diretamente no
+        <strong>uso operacional, implantação e acompanhamento</strong> desses sistemas em ambientes de varejo,
+        o que proporcionou uma visão ampliada sobre <strong>gestão empresarial, integração de processos e automação</strong>.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="flex items-center font-semibold text-lg text-gray-800">
+        <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+        Analista de Sistemas — Globalweb Outsourcing | Telebras (2021 – 2023)
+      </h3>
+      <p class="text-gray-700">
+        Atuação na empresa <strong>Telecomunicações Brasileiras - TELEBRAS</strong> como
+        <strong>Analista de Sistemas / Desenvolvedor Fullstack</strong>, com desenvolvimento e manutenção de sistemas
+        corporativos em <strong>PHP, JavaScript, jQuery, Ajax, HTML5, CSS3 e Bootstrap</strong>. Experiência em
+        <strong>administração de bancos de dados MySQL</strong>, aplicação de <strong>metodologias ágeis (Kanban)</strong>
+        e versionamento de código com <strong>Git e TortoiseSVN</strong>.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="flex items-center font-semibold text-lg text-gray-800">
+        <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+        Estagiário — Dataprev - Empresa de Tecnologia e Informações da Previdência Social (2017 – 2018)
+      </h3>
+      <p class="text-gray-700">
+        Apoio na análise de processos em sistemas de grande porte. Relatórios gerenciais, indicadores de desempenho e suporte técnico. Automação de relatórios no pacote Office avançado.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="flex items-center font-semibold text-lg text-gray-800">
+        <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+        Estagiário — Semob - Secretaria de Transporte e Mobilidade do DF (2016 – 2017)
+      </h3>
+      <p class="text-gray-700">
+        Desenvolvimento <strong>front-end</strong> com HTML5, CSS3 e JavaScript. Participação em projetos de modernização de sistemas legados.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="flex items-center font-semibold text-lg text-gray-800">
+        <i class="bi bi-check-circle-fill text-blue-600 mr-2"></i>
+        Auxiliar de CPD — Big Box Supermercados (2011 – 2016)
+      </h3>
+      <p class="text-gray-700">
+        Atuação com <strong>ERP Lumi Software</strong>. Suporte a usuários, manutenção de estações, impressoras e rede.
+        Rotinas de backup e segurança de dados em ambiente corporativo 24/7.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+      <!-- CERTIFICAÇÕES -->
+      <section class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="700">
         <h2 class="uppercase tracking-wide text-primary font-bold mb-4 flex items-center gap-2">
           <i class="bi bi-award-fill"></i>
           Certificações
@@ -217,7 +284,16 @@
         </ul>
       </section>
 
-      <!-- Footer -->
+      <!-- PROJETOS -->
+      <section id="projetos" class="bg-white rounded-2xl shadow p-6" data-aos="fade-up" data-aos-delay="900">
+        <h2 class="uppercase tracking-wide text-primary font-bold mb-4 flex items-center gap-2">
+          <i class="bi bi-folder-fill"></i>
+          Projetos
+        </h2>
+        <p class="text-gray-700 text-sm text-justify"><em>Em breve, links para projetos desenvolvidos estarão disponíveis aqui.</em></p>
+      </section>
+
+      <!-- FOOTER -->
       <footer class="relative text-center text-sm text-gray-500 mt-10 py-6 border-t">
         <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient"></div>
         ©
@@ -227,10 +303,29 @@
       </footer>
     </div>
 
-    <!-- Scripts -->
+    <!-- BOTÃO FLUTUANTE -->
+    <button id="btnProjetos" class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 animate-pulseCustom">
+      <i class="bi bi-arrow-down-circle text-2xl"></i>
+    </button>
+
+    <!-- SCRIPTS -->
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById('year').textContent = new Date().getFullYear();
       AOS.init({ duration: 1000, once: true });
+
+      // Lista de sections em ordem
+      const sections = [
+        document.body, // topo (Hero)
+        document.querySelector('section:nth-of-type(2)'), // Contatos/Formação
+        document.querySelector('section:nth-of-type(3)'), // Experiência
+        document.querySelector('section:nth-of-type(4)'), // Certificações
+        document.getElementById('projetos'), // Projetos
+      ];
+      let currentIndex = 0;
+      document.getElementById('btnProjetos').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % sections.length;
+        sections[currentIndex].scrollIntoView({ behavior: 'smooth' });
+      });
     </script>
   </body>
 </html>
