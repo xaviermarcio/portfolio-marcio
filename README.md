@@ -18,3 +18,10 @@ O objetivo é apresentar minha **formação acadêmica**, **experiência profiss
 - E-mail: xaviermarcio80@gmail.com  
 - LinkedIn: [linkedin.com/in/marcioxavierbsb](https://www.linkedin.com/in/marcioxavierbsb/)  
 - GitHub: [github.com/xaviermarcio](https://github.com/xaviermarcio)
+
+## 📜 Licença
+Projeto desenvolvido por **Márcio Xavier** para fins de **estudo, prática e portfólio profissional**.  
+Distribuição permitida apenas para fins **educacionais e não comerciais**, mantendo a **menção obrigatória ao autor** em qualquer uso, modificação ou redistribuição.
+
+© 2025 — Márcio Xavier. Todos os direitos reservados.
+
