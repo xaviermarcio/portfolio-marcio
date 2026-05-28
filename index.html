@@ -5,677 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Márcio Xavier</title>
   <meta name="description" content="Analista de Sistemas com experiência em desenvolvimento web, BI e Ciência de Dados. Brasília, DF." />
+  <meta property="og:title"       content="Márcio Xavier — Analista de Sistemas" />
+  <meta property="og:description" content="Analista de Sistemas com experiência em desenvolvimento web, BI e Ciência de Dados." />
+  <meta property="og:type"        content="website" />
 
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <style>
-    :root {
-      --bg:           #FFFFFF;
-      --bg-soft:      #F7F8FA;
-      --bg-hover:     #F0F2F6;
-      --border:       #E8EAED;
-      --border-strong:#D1D5DB;
-      --ink:          #0D0F12;
-      --ink-secondary:#4B5563;
-      --ink-tertiary: #9CA3AF;
-      --blue:         #2563EB;
-      --blue-light:   #EFF6FF;
-      --blue-border:  #BFDBFE;
-      --blue-mid:     #DBEAFE;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── Page wrapper ── */
-    .page {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 64px 40px 120px;
-    }
-    @media (max-width: 600px) { .page { padding: 40px 20px 80px; } }
-
-    /* ══════════════════════════════════
-       HERO
-    ══════════════════════════════════ */
-    .hero {
-      padding-bottom: 56px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 64px;
-      opacity: 0;
-      animation: rise 0.7s ease 0.05s forwards;
-    }
-
-    .available-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--blue-light);
-      border: 1px solid var(--blue-border);
-      color: var(--blue);
-      font-size: 11.5px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      padding: 5px 12px;
-      border-radius: 100px;
-      margin-bottom: 28px;
-    }
-
-    .available-badge::before {
-      content: '';
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--blue);
-      animation: blink 2.2s ease infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.3; }
-    }
-
-    h1 {
-      font-size: clamp(2.6rem, 7vw, 4.8rem);
-      font-weight: 900;
-      line-height: 1.0;
-      letter-spacing: -0.04em;
-      color: var(--ink);
-      margin-bottom: 16px;
-    }
-
-    h1 .first { color: var(--ink); }
-    h1 .last  { color: var(--blue); }
-
-    .hero-role {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--ink-tertiary);
-      letter-spacing: 0.02em;
-      margin-bottom: 24px;
-    }
-
-    .hero-bio {
-      max-width: 560px;
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--ink-secondary);
-      line-height: 1.8;
-      margin-bottom: 36px;
-    }
-
-    /* ── Contact buttons ── */
-    .contact-bar { display: flex; flex-wrap: wrap; gap: 8px; }
-
-    .contact-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 9px 18px;
-      border: 1px solid var(--border-strong);
-      border-radius: 8px;
-      font-family: 'Inter', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink-secondary);
-      text-decoration: none;
-      background: var(--bg);
-      transition: all 0.15s ease;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
-
-    .contact-btn:hover {
-      border-color: var(--blue);
-      color: var(--blue);
-      background: var(--blue-light);
-      box-shadow: 0 0 0 3px var(--blue-mid);
-    }
-
-    .contact-btn svg {
-      width: 14px; height: 14px;
-      stroke: currentColor; fill: none;
-      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-    }
-
-    /* ══════════════════════════════════
-       SECTIONS
-    ══════════════════════════════════ */
-    section {
-      margin-bottom: 64px;
-      opacity: 0;
-      animation: rise 0.7s ease forwards;
-    }
-    section:nth-of-type(1) { animation-delay: 0.18s; }
-    section:nth-of-type(2) { animation-delay: 0.28s; }
-    section:nth-of-type(3) { animation-delay: 0.38s; }
-    section:nth-of-type(4) { animation-delay: 0.48s; }
-
-    .section-head {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 32px;
-    }
-
-    .section-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      white-space: nowrap;
-    }
-
-    .section-rule {
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    /* ══════════════════════════════════
-       EXPERIENCE
-    ══════════════════════════════════ */
-    .exp-list { display: flex; flex-direction: column; gap: 2px; }
-
-    .exp-card {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px 28px;
-      background: var(--bg);
-      transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
-    }
-
-    .exp-card:hover {
-      border-color: var(--blue-border);
-      background: var(--blue-light);
-      box-shadow: 0 2px 16px rgba(37,99,235,0.06);
-    }
-
-    .exp-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 6px 16px;
-      margin-bottom: 4px;
-    }
-
-    .exp-role {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.3;
-    }
-
-    .exp-period {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--ink-tertiary);
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      padding: 3px 10px;
-      border-radius: 100px;
-      white-space: nowrap;
-    }
-
-    .exp-company {
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--blue);
-      margin-bottom: 14px;
-      letter-spacing: 0.01em;
-    }
-
-    .exp-text {
-      font-size: 14.5px;
-      font-weight: 400;
-      color: var(--ink-secondary);
-      line-height: 1.8;
-    }
-
-    .exp-text p { margin-bottom: 8px; }
-    .exp-text p:last-child { margin-bottom: 0; }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
-
-    .tag {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--ink-secondary);
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      padding: 3px 10px;
-      border-radius: 6px;
-      letter-spacing: 0.03em;
-      transition: all 0.15s;
-    }
-
-    .tag:hover {
-      background: var(--blue-light);
-      border-color: var(--blue-border);
-      color: var(--blue);
-    }
-
-    /* ══════════════════════════════════
-       EDUCATION + CERTS
-    ══════════════════════════════════ */
-    .edu-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    @media (max-width: 540px) { .edu-grid { grid-template-columns: 1fr; } }
-
-    .edu-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px 22px;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-
-    .edu-card:hover {
-      border-color: var(--blue-border);
-      box-shadow: 0 2px 12px rgba(37,99,235,0.06);
-    }
-
-    .edu-degree {
-      font-size: 13.5px;
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.35;
-      margin-bottom: 4px;
-    }
-
-    .edu-school {
-      font-size: 12.5px;
-      font-weight: 400;
-      color: var(--ink-secondary);
-      margin-bottom: 8px;
-    }
-
-    .edu-year {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--blue);
-      background: var(--blue-light);
-      border: 1px solid var(--blue-border);
-      padding: 2px 9px;
-      border-radius: 100px;
-    }
-
-    /* ══════════════════════════════════
-       SKILLS
-    ══════════════════════════════════ */
-
-    /* Top 3 destacadas */
-    .skills-top {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-
-    @media (max-width: 600px) { .skills-top { grid-template-columns: 1fr; } }
-
-    .skill-top-card {
-      background: var(--blue-light);
-      border: 1.5px solid var(--blue-border);
-      border-radius: 10px;
-      padding: 20px 20px 16px;
-      transition: box-shadow 0.15s, border-color 0.15s;
-    }
-
-    .skill-top-card:hover {
-      box-shadow: 0 4px 20px rgba(37,99,235,0.12);
-      border-color: var(--blue);
-    }
-
-    .skill-top-icon {
-      font-size: 22px;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .skill-top-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--blue);
-      margin-bottom: 6px;
-    }
-
-    .skill-top-items {
-      font-size: 12px;
-      font-weight: 400;
-      color: var(--ink-secondary);
-      line-height: 1.7;
-    }
-
-    /* Categorias secundárias */
-    .skills-categories { display: flex; flex-direction: column; gap: 20px; }
-
-    .skill-category {}
-
-    .skill-category-label {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-tertiary);
-      margin-bottom: 10px;
-    }
-
-    .skill-category-items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .skill-item {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 7px 14px;
-      font-size: 12.5px;
-      font-weight: 500;
-      color: var(--ink-secondary);
-      transition: all 0.15s;
-    }
-
-    .skill-item:hover {
-      background: var(--blue-light);
-      border-color: var(--blue-border);
-      color: var(--blue);
-    }
-
-    /* ══════════════════════════════════
-       FOOTER
-    ══════════════════════════════════ */
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--ink-tertiary);
-    }
-
-    /* ══════════════════════════════════
-       ANIMATION
-    ══════════════════════════════════ */
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
-  </style>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<body>
-<div class="page">
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="available-badge">Disponível para oportunidades</div>
+<body class="bg-white text-gray-900 font-sans antialiased">
+<div id="app" class="max-w-4xl mx-auto px-5 sm:px-8 py-14 sm:py-20 pb-28">
 
-    <h1>
-      <span class="first">Márcio </span><span class="last">Xavier</span>
-    </h1>
-    <p class="hero-role">Analista de Sistemas &nbsp;·&nbsp; Desenvolvimento Web &nbsp;·&nbsp; BI &amp; Dados &nbsp;·&nbsp; Brasília, DF</p>
-
-    <p class="hero-bio">
-      Trabalho com tecnologia há mais de uma década, construindo sistemas que resolvem problemas reais.
-      Ao longo da carreira, passei por organizações públicas e privadas de diferentes portes, o que me deu
-      uma visão ampla de como tecnologia e negócio precisam conversar para gerar resultado de verdade.
-    </p>
-
-    <div class="contact-bar">
-      <a class="contact-btn" href="mailto:xaviermarcio80@gmail.com">
-        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-        xaviermarcio80@gmail.com
-      </a>
-      <a class="contact-btn" href="https://linkedin.com/in/marcioxavierbsb" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a class="contact-btn" href="https://github.com/xaviermarcio" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        GitHub
-      </a>
-    </div>
+  <!-- ══ HERO ══════════════════════════════════════════════ -->
+  <header id="hero" class="pb-12 border-b border-gray-100 mb-16 animate-rise delay-0">
+    <!-- Populated by main.js -->
   </header>
 
-  <!-- EXPERIÊNCIA -->
-  <section>
-    <div class="section-head">
-      <span class="section-label">Experiência Profissional</span>
-      <div class="section-rule"></div>
+  <!-- ══ EXPERIÊNCIA ═══════════════════════════════════════ -->
+  <section class="mb-16 observe">
+    <div class="flex items-center gap-4 mb-8">
+      <span class="text-xs font-bold tracking-widest uppercase text-blue-600 whitespace-nowrap">
+        Experiência Profissional
+      </span>
+      <div class="flex-1 h-px bg-gray-100"></div>
     </div>
-    <div class="exp-list">
-
-      <div class="exp-card">
-        <div class="exp-meta">
-          <span class="exp-role">Analista e Desenvolvedor Autônomo</span>
-          <span class="exp-period">2023 — Presente</span>
-        </div>
-        <p class="exp-company">Atendimento a Clientes e Projetos Próprios</p>
-        <div class="exp-text">
-          <p>Neste período atuo de forma completa e independente, combinando desenvolvimento de software, infraestrutura e suporte técnico para resolver problemas reais de pessoas e negócios. Meu diferencial é conseguir enxergar o problema antes de pensar na solução, o que me permite entregar algo que de fato funciona no dia a dia do cliente, não apenas no papel.</p>
-          <p>No lado do desenvolvimento, criei sistemas web de ponta a ponta, incluindo uma aplicação PWA para rastreamento de perdas no varejo hortifrutigranjeiro, com autenticação de usuários, banco de dados em tempo real, funcionamento offline e painel de indicadores para apoio à gestão. Trabalho também com Power BI na construção de dashboards para análise de desempenho e suporte à tomada de decisão.</p>
-          <p>No lado de infraestrutura e hardware, faço montagem e manutenção de computadores, configuração de redes e roteadores, suporte técnico presencial e instalação e configuração completa de máquinas. Também atuei na implantação de sistemas ERP de PDV em ambientes de varejo, acompanhando a operação de perto até o cliente ganhar autonomia.</p>
-        </div>
-        <div class="tags">
-          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
-          <span class="tag">PWA</span><span class="tag">Firebase</span><span class="tag">Firestore</span>
-          <span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">ERP / PDV</span>
-          <span class="tag">Redes</span><span class="tag">Hardware</span><span class="tag">Suporte Técnico</span>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-meta">
-          <span class="exp-role">Analista de Sistemas</span>
-          <span class="exp-period">2021 — 2023</span>
-        </div>
-        <p class="exp-company">Globalweb Outsourcing · Telebras</p>
-        <div class="exp-text">
-          <p>Atuei como Desenvolvedor Fullstack alocado na Telebras, empresa pública de telecomunicações, onde trabalhei no
-          desenvolvimento e manutenção de sistemas corporativos utilizados internamente. Foi uma experiência importante para
-          consolidar práticas de qualidade de código, versionamento e trabalho em equipe dentro de metodologias ágeis.</p>
-        </div>
-        <div class="tags">
-          <span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">jQuery</span>
-          <span class="tag">Ajax</span><span class="tag">MySQL</span><span class="tag">Git</span>
-          <span class="tag">TortoiseSVN</span><span class="tag">Kanban</span>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-meta">
-          <span class="exp-role">Estagiário — Análise de Sistemas</span>
-          <span class="exp-period">2017 — 2018</span>
-        </div>
-        <p class="exp-company">Dataprev</p>
-        <div class="exp-text">
-          <p>Apoiei a análise de processos em sistemas de grande porte, elaborei relatórios gerenciais e indicadores de desempenho,
-          e automatizei rotinas de relatório com Office avançado. Foi meu primeiro contato com o ritmo e a escala de uma
-          organização federal de tecnologia.</p>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-meta">
-          <span class="exp-role">Estagiário — Front-end</span>
-          <span class="exp-period">2016 — 2017</span>
-        </div>
-        <p class="exp-company">Semob — Secretaria de Transporte e Mobilidade do DF</p>
-        <div class="exp-text">
-          <p>Desenvolvi interfaces com HTML5, CSS3 e JavaScript e participei de iniciativas de modernização de sistemas legados,
-          sendo esta minha primeira experiência formal com desenvolvimento web.</p>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-meta">
-          <span class="exp-role">Auxiliar de CPD</span>
-          <span class="exp-period">2011 — 2016</span>
-        </div>
-        <p class="exp-company">Big Box Supermercados</p>
-        <div class="exp-text">
-          <p>Fui responsável pela operação e suporte ao ERP interno, manutenção de estações de trabalho e infraestrutura de rede,
-          além das rotinas de backup e segurança de dados em ambiente corporativo de alta disponibilidade.
-          Foi aqui que desenvolvi minha base em TI e percebi que queria ir além do suporte.</p>
-        </div>
-      </div>
-
+    <div id="section-experience" class="flex flex-col gap-3">
+      <!-- Skeleton loading -->
+      <div class="skeleton h-40 w-full"></div>
+      <div class="skeleton h-32 w-full"></div>
+      <div class="skeleton h-28 w-full"></div>
     </div>
   </section>
 
-  <!-- FORMAÇÃO -->
-  <section>
-    <div class="section-head">
-      <span class="section-label">Formação Acadêmica</span>
-      <div class="section-rule"></div>
+  <!-- ══ FORMAÇÃO ══════════════════════════════════════════ -->
+  <section class="mb-16 observe">
+    <div class="flex items-center gap-4 mb-8">
+      <span class="text-xs font-bold tracking-widest uppercase text-blue-600 whitespace-nowrap">
+        Formação Acadêmica
+      </span>
+      <div class="flex-1 h-px bg-gray-100"></div>
     </div>
-    <div class="edu-grid">
-      <div class="edu-card">
-        <p class="edu-degree">Bacharelado em Sistemas de Informação</p>
-        <p class="edu-school">UDF — Centro Universitário do Distrito Federal</p>
-        <p class="edu-year">2020</p>
-      </div>
-      <div class="edu-card">
-        <p class="edu-degree">Pós-graduação em Banco de Dados e BI</p>
-        <p class="edu-school">Senac DF</p>
-        <p class="edu-year">2023</p>
-      </div>
-      <div class="edu-card">
-        <p class="edu-degree">Pós-graduação em Ciência de Dados</p>
-        <p class="edu-school">Gran Faculdade</p>
-        <p class="edu-year">2025</p>
-      </div>
-      <div class="edu-card">
-        <p class="edu-degree">Pós-graduação em Segurança da Informação</p>
-        <p class="edu-school">Gran Faculdade</p>
-        <p class="edu-year">2025</p>
-      </div>
+    <div id="section-education" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div class="skeleton h-24 w-full"></div>
+      <div class="skeleton h-24 w-full"></div>
+      <div class="skeleton h-24 w-full"></div>
+      <div class="skeleton h-24 w-full"></div>
     </div>
   </section>
 
-  <!-- CERTIFICAÇÕES -->
-  <section>
-    <div class="section-head">
-      <span class="section-label">Certificações</span>
-      <div class="section-rule"></div>
+  <!-- ══ CERTIFICAÇÕES ═════════════════════════════════════ -->
+  <section class="mb-16 observe">
+    <div class="flex items-center gap-4 mb-8">
+      <span class="text-xs font-bold tracking-widest uppercase text-blue-600 whitespace-nowrap">
+        Certificações
+      </span>
+      <div class="flex-1 h-px bg-gray-100"></div>
     </div>
-    <div class="edu-grid">
-      <div class="edu-card">
-        <p class="edu-degree">ITIL 4 Foundation</p>
-        <p class="edu-school">Information Technology Infrastructure Library</p>
-        <p class="edu-year">2021</p>
-      </div>
-      <div class="edu-card">
-        <p class="edu-degree">BIFPC</p>
-        <p class="edu-school">Business Intelligence Foundation Professional Certification</p>
-        <p class="edu-year">2023</p>
-      </div>
+    <div id="section-certifications" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div class="skeleton h-24 w-full"></div>
+      <div class="skeleton h-24 w-full"></div>
     </div>
   </section>
 
-  <!-- COMPETÊNCIAS -->
-  <section>
-    <div class="section-head">
-      <span class="section-label">Competências</span>
-      <div class="section-rule"></div>
+  <!-- ══ COMPETÊNCIAS ══════════════════════════════════════ -->
+  <section class="mb-16 observe">
+    <div class="flex items-center gap-4 mb-8">
+      <span class="text-xs font-bold tracking-widest uppercase text-blue-600 whitespace-nowrap">
+        Competências
+      </span>
+      <div class="flex-1 h-px bg-gray-100"></div>
     </div>
-
-    <!-- Top 3 em destaque -->
-    <div class="skills-top">
-      <div class="skill-top-card">
-        <span class="skill-top-icon">🌐</span>
-        <p class="skill-top-title">Desenvolvimento Web</p>
-        <p class="skill-top-items">HTML5, CSS3, JavaScript, PHP, PWA, Firebase, Service Worker, Git</p>
-      </div>
-      <div class="skill-top-card">
-        <span class="skill-top-icon">📊</span>
-        <p class="skill-top-title">Business Intelligence</p>
-        <p class="skill-top-items">Power BI, dashboards gerenciais, KPIs, análise de desempenho operacional</p>
-      </div>
-      <div class="skill-top-card">
-        <span class="skill-top-icon">🗄️</span>
-        <p class="skill-top-title">Banco de Dados</p>
-        <p class="skill-top-items">MySQL, Firestore, modelagem de dados, consultas e otimização de queries</p>
-      </div>
+    <!-- Top 3 -->
+    <div id="skills-highlight" class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+      <div class="skeleton h-36 w-full"></div>
+      <div class="skeleton h-36 w-full"></div>
+      <div class="skeleton h-36 w-full"></div>
     </div>
-
-    <!-- Demais categorias -->
-    <div class="skills-categories">
-
-      <div class="skill-category">
-        <p class="skill-category-label">Dados e IA</p>
-        <div class="skill-category-items">
-          <span class="skill-item">Python</span>
-          <span class="skill-item">Ciência de Dados</span>
-          <span class="skill-item">Análise Exploratória</span>
-          <span class="skill-item">Inteligência Artificial Aplicada</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <p class="skill-category-label">Infraestrutura e Suporte</p>
-        <div class="skill-category-items">
-          <span class="skill-item">Montagem e Manutenção de Computadores</span>
-          <span class="skill-item">Configuração de Redes</span>
-          <span class="skill-item">Suporte Técnico Presencial</span>
-          <span class="skill-item">Instalação de Sistemas</span>
-          <span class="skill-item">ERP e Sistemas de PDV</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <p class="skill-category-label">Gestão e Processos</p>
-        <div class="skill-category-items">
-          <span class="skill-item">Metodologias Ágeis</span>
-          <span class="skill-item">ITIL 4</span>
-          <span class="skill-item">Segurança da Informação</span>
-          <span class="skill-item">Versionamento com Git</span>
-        </div>
-      </div>
-
+    <!-- Categories -->
+    <div id="skills-categories" class="flex flex-col gap-5">
+      <div class="skeleton h-12 w-full"></div>
+      <div class="skeleton h-12 w-full"></div>
+      <div class="skeleton h-12 w-full"></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <span>© <span id="year"></span> Márcio Xavier</span>
+  <!-- ══ FOOTER ════════════════════════════════════════════ -->
+  <footer class="border-t border-gray-100 pt-6 flex flex-wrap justify-between gap-3
+    text-xs font-medium text-gray-300 tracking-wide observe">
+    <span id="footer-name"></span>
     <span>Brasília — DF</span>
   </footer>
 
+  <!-- year fallback -->
+  <span id="year" class="hidden"></span>
+
 </div>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+
+<!-- App entry point (ES modules) -->
+<script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>

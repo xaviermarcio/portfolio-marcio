@@ -1,27 +1,57 @@
-# Portfólio — Márcio Xavier
+# Márcio Xavier — Portfólio Profissional
 
-Este é o meu portfólio pessoal, desenvolvido em **HTML + Tailwind CSS**, e hospedado no **GitHub Pages**.  
-O objetivo é apresentar minha **formação acadêmica**, **experiência profissional**, **certificações** e alguns **projetos em TI, IA e Dados**.
+Currículo online desenvolvido com HTML5, Tailwind CSS e JavaScript modular (ES Modules).
 
-## 📌 Tecnologias utilizadas
-- HTML5
-- Tailwind CSS
-- Bootstrap Icons
-- GitHub Pages
+## 📁 Estrutura do projeto
 
-## 📚 Sobre mim
-- Bacharel em Sistemas de Informação (UDF, 2020)
-- Pós-graduação em Banco de Dados & BI, Ciência de Dados e Segurança da Informação
-- Experiência em TI com empresas como **Telebras**, **Dataprev**, **BigBox** e **Globalweb**
+```
+/
+├── index.html               # Estrutura base — sem conteúdo hardcoded
+├── data/
+│   └── cv.json              # Todos os dados do currículo (simula uma API)
+├── assets/
+│   ├── css/
+│   │   └── style.css        # Animações, skeleton loader e transições
+│   ├── js/
+│   │   ├── main.js          # Entry point — fetch, orquestração e observers
+│   │   ├── render.js        # Funções puras de renderização (HTML a partir de dados)
+│   │   └── icons.js         # Strings SVG reutilizáveis
+│   └── images/              # Foto de perfil e outros assets visuais
+└── README.md
+```
 
-## 📧 Contato
-- E-mail: xaviermarcio80@gmail.com  
-- LinkedIn: [linkedin.com/in/marcioxavierbsb](https://www.linkedin.com/in/marcioxavierbsb/)  
-- GitHub: [github.com/xaviermarcio](https://github.com/xaviermarcio)
+## 🚀 Como executar localmente
 
-## 📜 Licença
-Projeto desenvolvido por **Márcio Xavier** para fins de **estudo, prática e portfólio profissional**.  
-Distribuição permitida apenas para fins **educacionais e não comerciais**, mantendo a **menção obrigatória ao autor** em qualquer uso, modificação ou redistribuição.
+Por usar ES Modules e `fetch`, o projeto precisa de um servidor HTTP local (não funciona via `file://`).
 
-© 2025 — Márcio Xavier. Todos os direitos reservados.
+```bash
+# Com Python
+python -m http.server 8080
 
+# Com Node.js (npx)
+npx serve .
+
+# Com VS Code
+# Instale a extensão Live Server e clique em "Go Live"
+```
+
+Acesse: `http://localhost:8080`
+
+## ✏️ Como atualizar o currículo
+
+Todo o conteúdo está centralizado em **`data/cv.json`**.  
+Para atualizar experiências, formação, certificações ou competências, edite apenas esse arquivo — sem mexer em HTML ou JavaScript.
+
+## 🛠️ Tecnologias utilizadas
+
+- **HTML5** — estrutura semântica
+- **Tailwind CSS** (CDN) — estilização utilitária e responsividade
+- **JavaScript ES Modules** — organização modular sem build step
+- **Fetch API** — carregamento assíncrono dos dados
+- **IntersectionObserver** — animações de entrada ao fazer scroll
+- **GitHub Pages** — hospedagem
+
+## 📄 Licença
+
+Desenvolvido por **Márcio Xavier** para fins de portfólio profissional.  
+© 2025 — Todos os direitos reservados.

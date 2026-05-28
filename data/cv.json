@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "name": "Márcio Xavier",
+    "role": "Analista de Sistemas",
+    "tagline": "Desenvolvimento Web · BI & Dados · Brasília, DF",
+    "available": true,
+    "availableText": "Disponível para oportunidades",
+    "bio": "Trabalho com tecnologia há mais de uma década, construindo sistemas que resolvem problemas reais. Ao longo da carreira, passei por organizações públicas e privadas de diferentes portes, o que me deu uma visão ampla de como tecnologia e negócio precisam conversar para gerar resultado de verdade.",
+    "contact": [
+      { "label": "xaviermarcio80@gmail.com", "href": "mailto:xaviermarcio80@gmail.com", "icon": "email" },
+      { "label": "LinkedIn",                 "href": "https://linkedin.com/in/marcioxavierbsb", "icon": "linkedin" },
+      { "label": "GitHub",                   "href": "https://github.com/xaviermarcio", "icon": "github" }
+    ]
+  },
+
+  "experience": [
+    {
+      "role": "Analista e Desenvolvedor Autônomo",
+      "company": "Atendimento a Clientes e Projetos Próprios",
+      "period": "2023 — Presente",
+      "description": [
+        "Neste período atuo de forma completa e independente, combinando desenvolvimento de software, infraestrutura e suporte técnico para resolver problemas reais de pessoas e negócios. Meu diferencial é conseguir enxergar o problema antes de pensar na solução, o que me permite entregar algo que de fato funciona no dia a dia do cliente, não apenas no papel.",
+        "No lado do desenvolvimento, criei sistemas web de ponta a ponta, incluindo uma aplicação PWA para rastreamento de perdas no varejo hortifrutigranjeiro, com autenticação de usuários, banco de dados em tempo real, funcionamento offline e painel de indicadores para apoio à gestão. Trabalho também com Power BI na construção de dashboards para análise de desempenho e tomada de decisão.",
+        "No lado de infraestrutura e hardware, faço montagem e manutenção de computadores, configuração de redes e roteadores, suporte técnico presencial e instalação completa de máquinas. Também atuei na implantação de sistemas ERP de PDV em ambientes de varejo, acompanhando a operação de perto até o cliente ganhar autonomia."
+      ],
+      "tags": ["HTML5","CSS3","JavaScript","PWA","Firebase","Firestore","Python","Power BI","ERP / PDV","Redes","Hardware","Suporte Técnico"]
+    },
+    {
+      "role": "Analista de Sistemas",
+      "company": "Globalweb Outsourcing · Telebras",
+      "period": "2021 — 2023",
+      "description": [
+        "Atuei como Desenvolvedor Fullstack alocado na Telebras, empresa pública de telecomunicações, onde trabalhei no desenvolvimento e manutenção de sistemas corporativos utilizados internamente. Foi uma experiência importante para consolidar práticas de qualidade de código, versionamento e trabalho em equipe dentro de metodologias ágeis."
+      ],
+      "tags": ["PHP","JavaScript","jQuery","Ajax","MySQL","Git","Kanban"]
+    },
+    {
+      "role": "Estagiário — Análise de Sistemas",
+      "company": "Dataprev",
+      "period": "2017 — 2018",
+      "description": [
+        "Apoiei a análise de processos em sistemas de grande porte, elaborei relatórios gerenciais e indicadores de desempenho, e automatizei rotinas de relatório com Office avançado. Foi meu primeiro contato com o ritmo e a escala de uma organização federal de tecnologia."
+      ],
+      "tags": []
+    },
+    {
+      "role": "Estagiário — Front-end",
+      "company": "Semob — Secretaria de Transporte e Mobilidade do DF",
+      "period": "2016 — 2017",
+      "description": [
+        "Desenvolvi interfaces com HTML5, CSS3 e JavaScript e participei de iniciativas de modernização de sistemas legados, sendo esta minha primeira experiência formal com desenvolvimento web."
+      ],
+      "tags": []
+    },
+    {
+      "role": "Auxiliar de CPD",
+      "company": "Big Box Supermercados",
+      "period": "2011 — 2016",
+      "description": [
+        "Fui responsável pela operação e suporte ao ERP interno, manutenção de estações de trabalho e infraestrutura de rede, além das rotinas de backup e segurança de dados em ambiente corporativo de alta disponibilidade. Foi aqui que desenvolvi minha base em TI e percebi que queria ir além do suporte."
+      ],
+      "tags": []
+    }
+  ],
+
+  "education": [
+    { "degree": "Bacharelado em Sistemas de Informação",      "school": "UDF — Centro Universitário do Distrito Federal", "year": "2020" },
+    { "degree": "Pós-graduação em Banco de Dados e BI",        "school": "Senac DF",                                       "year": "2023" },
+    { "degree": "Pós-graduação em Ciência de Dados",           "school": "Gran Faculdade",                                 "year": "2025" },
+    { "degree": "Pós-graduação em Segurança da Informação",    "school": "Gran Faculdade",                                 "year": "2025" }
+  ],
+
+  "certifications": [
+    { "title": "ITIL 4 Foundation",  "issuer": "Information Technology Infrastructure Library",        "year": "2021" },
+    { "title": "BIFPC",              "issuer": "Business Intelligence Foundation Professional Certification", "year": "2023" }
+  ],
+
+  "skills": {
+    "highlight": [
+      {
+        "icon": "🌐",
+        "title": "Desenvolvimento Web",
+        "items": "HTML5, CSS3, JavaScript, PHP, PWA, Firebase, Service Worker, Git",
+        "badge": null
+      },
+      {
+        "icon": "📊",
+        "title": "Business Intelligence",
+        "items": "Power BI, dashboards gerenciais, KPIs, análise de desempenho operacional",
+        "badge": "🏅 Certificado BIFPC"
+      },
+      {
+        "icon": "🗄️",
+        "title": "Banco de Dados",
+        "items": "MySQL, Firestore, modelagem de dados, consultas e otimização de queries",
+        "badge": null
+      }
+    ],
+    "categories": [
+      {
+        "label": "Dados e IA",
+        "items": ["Python", "Ciência de Dados", "Análise Exploratória", "Inteligência Artificial Aplicada"]
+      },
+      {
+        "label": "Infraestrutura e Suporte",
+        "items": ["Montagem e Manutenção de Computadores", "Configuração de Redes", "Suporte Técnico Presencial", "Instalação de Sistemas", "ERP e Sistemas de PDV"]
+      },
+      {
+        "label": "Gestão e Processos",
+        "items": ["Metodologias Ágeis", "ITIL 4", "Segurança da Informação"]
+      }
+    ]
+  }
+}
