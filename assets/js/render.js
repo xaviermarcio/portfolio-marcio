@@ -32,7 +32,7 @@ export const renderExperience = ({ role, company, period, description, tags }) =
           px-3 py-1 rounded-full whitespace-nowrap">${period}</span>
       </div>
       <p class="text-xs font-semibold text-blue-600 mb-4 tracking-wide">${company}</p>
-      <div class="text-sm text-gray-500 leading-relaxed space-y-2">${paragraphs}</div>
+      <div class="text-sm text-gray-500 leading-relaxed space-y-2 text-justify">${paragraphs}</div>
       ${tagPills}
     </div>`;
 };
@@ -58,7 +58,7 @@ export const renderSkillHighlight = ({ icon, title, items, badge }) => {
       hover:border-blue-400 hover:shadow-md transition-all duration-150">
       <span class="text-2xl mb-3 block">${icon}</span>
       <p class="text-sm font-bold text-blue-700 mb-2">${title}</p>
-      <p class="text-xs text-gray-500 leading-relaxed">${items}</p>
+      <p class="text-xs text-gray-500 leading-relaxed text-justify">${items}</p>
       ${badgeHtml}
     </div>`;
 };

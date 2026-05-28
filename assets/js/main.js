@@ -52,7 +52,7 @@ function renderHero({ name, role, tagline, available, availableText, bio, contac
       ${first} <span class="text-blue-600">${last}</span>
     </h1>
     <p class="text-sm font-medium text-gray-400 tracking-wide mb-6">${tagline}</p>
-    <p class="text-base sm:text-lg text-gray-500 leading-relaxed max-w-xl mb-9">${bio}</p>
+    <p class="text-base sm:text-lg text-gray-500 leading-relaxed max-w-xl mb-9 text-justify">${bio}</p>
     <div class="flex flex-wrap gap-3">
       ${contact.map(renderContact).join('')}
     </div>`;
