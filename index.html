@@ -3,122 +3,398 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Márcio Xavier</title>
-  <meta name="description" content="Analista de Sistemas com experiência em desenvolvimento web, BI e Ciência de Dados. Brasília, DF." />
+  <title>Márcio Xavier — Analista de Sistemas | Brasília, DF</title>
+  <meta name="description" content="Analista de Sistemas em Brasília (DF): desenvolvimento web com JavaScript, Firebase e Python, dados e BI, e suporte a sistemas de PDV/ERP no varejo." />
+  <meta name="author" content="Márcio Xavier do Nascimento" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Confirme a URL final do GitHub Pages e ajuste as linhas abaixo -->
+  <link rel="canonical" href="https://xaviermarcio.github.io/PORTFOLIO-MARCIO/" />
+  <meta property="og:url" content="https://xaviermarcio.github.io/PORTFOLIO-MARCIO/" />
+  <!-- <meta property="og:image" content="https://xaviermarcio.github.io/PORTFOLIO-MARCIO/assets/images/og-image.png" /> -->
+
+  <meta property="og:type"        content="profile" />
+  <meta property="og:locale"      content="pt_BR" />
   <meta property="og:title"       content="Márcio Xavier — Analista de Sistemas" />
-  <meta property="og:description" content="Analista de Sistemas com experiência em desenvolvimento web, BI e Ciência de Dados." />
-  <meta property="og:type"        content="website" />
+  <meta property="og:description" content="Desenvolvimento web, dados e BI, e suporte a sistemas de PDV/ERP no varejo. Brasília, DF." />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232563eb'/><text x='16' y='22' font-family='Arial' font-size='15' font-weight='900' fill='white' text-anchor='middle'>MX</text></svg>" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Márcio Xavier do Nascimento",
+    "alternateName": "Márcio Xavier",
+    "jobTitle": "Analista de Sistemas",
+    "email": "mailto:xaviermarcio80@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Brasília", "addressRegion": "DF", "addressCountry": "BR" },
+    "knowsAbout": ["JavaScript", "Firebase", "Python", "FastAPI", "PHP", "MySQL", "Power BI", "PDV/ERP", "Suporte em TI"],
+    "sameAs": ["https://linkedin.com/in/marcioxavierbsb", "https://github.com/xaviermarcio"]
+  }
+  </script>
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] }
-        }
-      }
-    }
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } } }
   </script>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- Custom styles -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
-<div id="app" class="max-w-4xl mx-auto px-5 sm:px-8 py-14 sm:py-20 pb-28">
+<div class="max-w-4xl mx-auto px-5 sm:px-8 py-14 sm:py-20 pb-28">
 
   <!-- ══ HERO ══════════════════════════════════════════════ -->
-  <header id="hero" class="pb-12 border-b border-gray-100 mb-16 animate-rise delay-0">
-    <!-- Populated by main.js -->
+  <header class="pb-12 border-b border-gray-100 mb-16 animate-rise">
+    <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-600
+      text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full mb-7">
+      <span class="w-2 h-2 rounded-full bg-blue-600 dot-blink" aria-hidden="true"></span>
+      Disponível para oportunidades
+    </div>
+
+    <h1 class="text-5xl sm:text-7xl font-black tracking-tighter leading-none mb-4">
+      Márcio <span class="text-blue-600">Xavier</span>
+    </h1>
+    <p class="text-sm font-medium text-gray-500 tracking-wide mb-6">
+      Desenvolvimento · Dados · Suporte em TI · Brasília, DF
+    </p>
+    <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mb-9">
+      Sou analista de sistemas e trabalho com TI desde 2011, da operação de CPD em rede de supermercados
+      ao desenvolvimento de sistemas web. Hoje atendo lojas de varejo como prestador de serviços: dou suporte
+      a sistemas de PDV e ERP, cuido de hardware e rede e desenvolvo ferramentas em JavaScript, Firebase e
+      Python que automatizam a rotina da operação. Busco oportunidades em desenvolvimento de sistemas,
+      análise de dados ou suporte técnico em TI.
+    </p>
+
+    <nav class="flex flex-wrap gap-3" aria-label="Contato">
+      <a href="mailto:xaviermarcio80@gmail.com" class="btn">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        xaviermarcio80@gmail.com
+      </a>
+      <a href="https://linkedin.com/in/marcioxavierbsb" target="_blank" rel="noopener noreferrer" class="btn">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/xaviermarcio" target="_blank" rel="noopener noreferrer" class="btn">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="./assets/docs/Curriculo-MarcioXavier-2026.pdf" download class="btn">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Baixar currículo (PDF)
+      </a>
+    </nav>
   </header>
 
-  <!-- ══ EXPERIÊNCIA ═══════════════════════════════════════ -->
-  <section class="mb-16 observe">
-    <div class="flex items-center gap-4 mb-8">
-      <span class="text-xs font-bold tracking-widest uppercase text-blue-600 whitespace-nowrap">
-        Experiência Profissional
-      </span>
-      <div class="flex-1 h-px bg-gray-100"></div>
-    </div>
-    <div id="section-experience" class="flex flex-col gap-3">
-      <!-- Skeleton loading -->
-      <div class="skeleton h-40 w-full"></div>
-      <div class="skeleton h-32 w-full"></div>
-      <div class="skeleton h-28 w-full"></div>
-    </div>
-  </section>
+  <main>
 
-  <!-- ══ FORMAÇÃO ══════════════════════════════════════════ -->
-  <section class="mb-16 observe">
-    <div class="flex items-center gap-4 mb-8">
-      <span class="text-xs font-bold tracking-widest uppercase text-blue-600 whitespace-nowrap">
-        Formação Acadêmica
-      </span>
-      <div class="flex-1 h-px bg-gray-100"></div>
-    </div>
-    <div id="section-education" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      <div class="skeleton h-24 w-full"></div>
-      <div class="skeleton h-24 w-full"></div>
-      <div class="skeleton h-24 w-full"></div>
-      <div class="skeleton h-24 w-full"></div>
-    </div>
-  </section>
+    <!-- ══ EXPERIÊNCIA ═════════════════════════════════════ -->
+    <section class="mb-16 observe" aria-labelledby="h-experience">
+      <div class="flex items-center gap-4 mb-8">
+        <h2 id="h-experience" class="section-title">Experiência Profissional</h2>
+        <div class="flex-1 h-px bg-gray-100"></div>
+      </div>
 
-  <!-- ══ CERTIFICAÇÕES ═════════════════════════════════════ -->
-  <section class="mb-16 observe">
-    <div class="flex items-center gap-4 mb-8">
-      <span class="text-xs font-bold tracking-widest uppercase text-blue-600 whitespace-nowrap">
-        Certificações
-      </span>
-      <div class="flex-1 h-px bg-gray-100"></div>
-    </div>
-    <div id="section-certifications" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      <div class="skeleton h-24 w-full"></div>
-      <div class="skeleton h-24 w-full"></div>
-    </div>
-  </section>
+      <div class="flex flex-col gap-3">
 
-  <!-- ══ COMPETÊNCIAS ══════════════════════════════════════ -->
-  <section class="mb-16 observe">
-    <div class="flex items-center gap-4 mb-8">
-      <span class="text-xs font-bold tracking-widest uppercase text-blue-600 whitespace-nowrap">
-        Competências
-      </span>
-      <div class="flex-1 h-px bg-gray-100"></div>
-    </div>
-    <!-- Top 3 -->
-    <div id="skills-highlight" class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-      <div class="skeleton h-36 w-full"></div>
-      <div class="skeleton h-36 w-full"></div>
-      <div class="skeleton h-36 w-full"></div>
-    </div>
-    <!-- Categories -->
-    <div id="skills-categories" class="flex flex-col gap-5">
-      <div class="skeleton h-12 w-full"></div>
-      <div class="skeleton h-12 w-full"></div>
-      <div class="skeleton h-12 w-full"></div>
-    </div>
-  </section>
+        <article class="card">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Analista de Sistemas e Suporte</h3>
+            <span class="period">2023 — Presente</span>
+          </div>
+          <p class="company">Prestador de Serviços em TI · Varejo</p>
+          <ul class="exp-list">
+            <li>Suporte técnico e operação de sistemas de PDV/ERP de diferentes fornecedores, conforme a realidade de cada loja (como Maqplan, SysPDV e Linear), incluindo configuração, lançamentos operacionais e atendimento aos usuários.</li>
+            <li>Instalação, configuração e manutenção de hardware e software: computadores, equipamentos de frente de caixa, impressoras, balanças, periféricos e rede.</li>
+            <li>Desenvolvimento de ferramentas web (JavaScript, Firebase e Python) para automatizar rotinas e facilitar a gestão da tecnologia nas lojas.</li>
+            <li>Levantamento de necessidades junto à gestão, organização de controles e relatórios e orientação dos colaboradores no uso dos sistemas.</li>
+          </ul>
+          <ul class="tags tags-divider" aria-label="Tecnologias">
+            <li>PDV / ERP</li><li>Maqplan</li><li>SysPDV</li><li>Linear</li><li>JavaScript</li>
+            <li>Firebase</li><li>Python</li><li>FastAPI</li><li>Hardware</li><li>Redes</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Analista de Desenvolvimento de Sistemas</h3>
+            <span class="period">2021 — 2023</span>
+          </div>
+          <p class="company">Globalweb Outsourcing do Brasil S.A. · alocado na Telebras</p>
+          <ul class="exp-list">
+            <li>Desenvolvimento e automação de sistemas web com back-end em PHP e front-end em JavaScript, HTML, CSS e Bootstrap.</li>
+            <li>Modelagem, armazenamento e gerenciamento de dados com MySQL.</li>
+            <li>Manutenção, atualização, segurança e otimização das aplicações web.</li>
+          </ul>
+          <ul class="tags tags-divider" aria-label="Tecnologias">
+            <li>PHP</li><li>JavaScript</li><li>jQuery</li><li>HTML</li><li>CSS</li>
+            <li>Bootstrap</li><li>MySQL</li><li>Git</li><li>Kanban</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Estagiário</h3>
+            <span class="period">2017 — 2018</span>
+          </div>
+          <p class="company">Dataprev — Empresa de Tecnologia e Informações da Previdência Social</p>
+          <ul class="exp-list">
+            <li>Análise e racionalização de processos.</li>
+            <li>Elaboração de relatórios de gestão, planilhas e controles.</li>
+            <li>Suporte de 1º e 2º nível.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Estagiário</h3>
+            <span class="period">2016 — 2017</span>
+          </div>
+          <p class="company">Semob — Secretaria de Mobilidade e Transporte do DF</p>
+          <ul class="exp-list">
+            <li>Desenvolvimento de novos sistemas e adaptação de programas existentes.</li>
+            <li>Alimentação e manutenção de dados.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Auxiliar de CPD</h3>
+            <span class="period">2011 — 2016</span>
+          </div>
+          <p class="company">Big Box — Rede de Supermercados</p>
+          <ul class="exp-list">
+            <li>Manutenção e configuração de computadores e do pacote Office.</li>
+            <li>Suporte técnico de nível 1 e 2 aos usuários da rede de lojas.</li>
+            <li>Suporte à emissão de notas fiscais eletrônicas no sistema Lumi Software.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══ PROJETOS ════════════════════════════════════════ -->
+    <section class="mb-16 observe" aria-labelledby="h-projects">
+      <div class="flex items-center gap-4 mb-8">
+        <h2 id="h-projects" class="section-title">Projetos</h2>
+        <div class="flex-1 h-px bg-gray-100"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+        <article class="card flex flex-col">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">La Rose Smart Waste</h3>
+            <span class="status">Em produção</span>
+          </div>
+          <p class="company">Controle de perdas no varejo hortifrúti</p>
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">PWA para registrar e acompanhar perdas de mercadoria em duas lojas. Funciona offline, tem autenticação de usuários e um painel administrativo com tabelas comparativas mês a mês, logout por inatividade e backup e recuperação de lotes.</p>
+          <ul class="tags mt-auto" aria-label="Tecnologias">
+            <li>JavaScript</li><li>PWA</li><li>Service Worker</li><li>Firebase</li><li>Firestore</li>
+          </ul>
+        </article>
+
+        <article class="card flex flex-col">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Escala Online</h3>
+            <span class="status">Em produção</span>
+          </div>
+          <p class="company">Escala de trabalho das equipes</p>
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">Aplicação web para montar a escala de trabalho: tipos de ausência com arrastar e soltar, gerenciador de turnos, cópia de dias, cálculo de horas extras e feriados, exportação em PDF e layout adaptado ao celular em retrato e paisagem.</p>
+          <ul class="tags mt-auto" aria-label="Tecnologias">
+            <li>JavaScript</li><li>Firebase</li><li>Firebase Hosting</li><li>PDF</li>
+          </ul>
+        </article>
+
+        <article class="card flex flex-col">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Gestor de Boletos</h3>
+            <span class="status">Em produção</span>
+          </div>
+          <p class="company">Automação financeira</p>
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">Sistema que lê boletos e notas em PDF, extrai os dados com OCR, valida a linha digitável pelo Módulo 10 e gera lembretes de pagamento prontos para enviar pelo WhatsApp.</p>
+          <ul class="tags mt-auto" aria-label="Tecnologias">
+            <li>Python</li><li>FastAPI</li><li>Tesseract OCR</li><li>pdfplumber</li><li>Firestore</li><li>PWA</li>
+          </ul>
+        </article>
+
+        <article class="card flex flex-col">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Editor de Pedidos</h3>
+            <span class="status">Em produção</span>
+          </div>
+          <p class="company">Compras com fornecedores</p>
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">PWA que roda na rede local da loja: lê os PDFs enviados pelos fornecedores e gera o pedido de compra em PDF. Inclui um instalador que verifica o Python, cria o ambiente virtual, resolve conflito de porta e detecta o IP da máquina automaticamente.</p>
+          <ul class="tags mt-auto" aria-label="Tecnologias">
+            <li>Python</li><li>FastAPI</li><li>PWA</li><li>PDF</li><li>Automação</li>
+          </ul>
+        </article>
+
+        <article class="card flex flex-col sm:col-span-2">
+          <div class="card-head">
+            <h3 class="text-base font-bold text-gray-900">Consulta CEP</h3>
+            <span class="status">Código aberto</span>
+          </div>
+          <p class="company">Projeto de estudo</p>
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">PWA de consulta de endereços pela API ViaCEP, com consulta em lote, exportação para CSV, skeleton loaders e notificações.</p>
+          <ul class="tags" aria-label="Tecnologias">
+            <li>JavaScript</li><li>PWA</li><li>API REST</li><li>CSV</li>
+          </ul>
+          <!-- Troque pelo link direto do repositório -->
+          <a href="https://github.com/xaviermarcio" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-blue-600 hover:underline">
+            Ver no GitHub
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══ FORMAÇÃO ════════════════════════════════════════ -->
+    <section class="mb-16 observe" aria-labelledby="h-education">
+      <div class="flex items-center gap-4 mb-8">
+        <h2 id="h-education" class="section-title">Formação Acadêmica</h2>
+        <div class="flex-1 h-px bg-gray-100"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="edu">
+          <h3>Pós-graduação em Ciência de Dados</h3>
+          <p>Gran Centro Universitário</p>
+          <span class="year">2025</span>
+        </div>
+        <div class="edu">
+          <h3>Pós-graduação em Segurança da Informação</h3>
+          <p>Gran Centro Universitário</p>
+          <span class="year">2025</span>
+        </div>
+        <div class="edu">
+          <h3>Pós-graduação em Banco de Dados e Business Intelligence</h3>
+          <p>Faculdade Senac-DF</p>
+          <span class="year">2023</span>
+        </div>
+        <div class="edu">
+          <h3>Bacharelado em Sistemas de Informação</h3>
+          <p>UDF — Centro Universitário do Distrito Federal</p>
+          <span class="year">2020</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CERTIFICAÇÕES E CURSOS ══════════════════════════ -->
+    <section class="mb-16 observe" aria-labelledby="h-certs">
+      <div class="flex items-center gap-4 mb-8">
+        <h2 id="h-certs" class="section-title">Certificações e Cursos</h2>
+        <div class="flex-1 h-px bg-gray-100"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="edu">
+          <h3>ITIL 4 Foundation</h3>
+          <p>Gerenciamento de serviços de TI</p>
+          <span class="year">Ago 2021</span>
+        </div>
+        <div class="edu">
+          <h3>Business Intelligence Foundation Professional (BIFPC)</h3>
+          <p>Business Intelligence</p>
+          <span class="year">Ago 2023</span>
+        </div>
+        <div class="edu">
+          <h3>Curso Técnico em Informática</h3>
+          <p>CEDASPY</p>
+          <span class="year">324 horas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ COMPETÊNCIAS ════════════════════════════════════ -->
+    <section class="mb-16 observe" aria-labelledby="h-skills">
+      <div class="flex items-center gap-4 mb-8">
+        <h2 id="h-skills" class="section-title">Competências</h2>
+        <div class="flex-1 h-px bg-gray-100"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+        <div class="skill-hi">
+          <span class="text-2xl mb-3 block" aria-hidden="true">🌐</span>
+          <h3>Desenvolvimento Web</h3>
+          <p>JavaScript, HTML5, CSS3, PHP, Python com FastAPI, Firebase, PWA e Service Worker, Git.</p>
+        </div>
+        <div class="skill-hi">
+          <span class="text-2xl mb-3 block" aria-hidden="true">📊</span>
+          <h3>Dados e BI</h3>
+          <p>Power BI, modelagem de dados, MySQL, Firestore, relatórios gerenciais e indicadores de desempenho.</p>
+          <span class="mt-3 inline-block text-xs font-bold text-blue-600 bg-white border border-blue-200 px-2.5 py-1 rounded-full">🏅 Certificado BIFPC</span>
+        </div>
+        <div class="skill-hi">
+          <span class="text-2xl mb-3 block" aria-hidden="true">🛒</span>
+          <h3>Sistemas para Varejo</h3>
+          <p>Operação e suporte de PDV/ERP (Maqplan, SysPDV, Linear), frente de caixa, balanças, impressoras e emissão de NF-e.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <div>
+          <h3 class="skill-cat">Dados e IA</h3>
+          <ul class="tags">
+            <li>Python</li><li>Ciência de Dados</li><li>Análise Exploratória</li><li>Inteligência Artificial Aplicada</li><li>OCR</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="skill-cat">Infraestrutura e Suporte</h3>
+          <ul class="tags">
+            <li>Montagem e Manutenção de Computadores</li><li>Redes e Roteadores</li><li>Suporte N1 e N2</li>
+            <li>Instalação de Sistemas</li><li>Periféricos de Frente de Caixa</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="skill-cat">Gestão e Processos</h3>
+          <ul class="tags">
+            <li>ITIL 4</li><li>Segurança da Informação</li><li>Levantamento de Requisitos</li>
+            <li>Treinamento de Usuários</li><li>Metodologias Ágeis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ══ FOOTER ════════════════════════════════════════════ -->
   <footer class="border-t border-gray-100 pt-6 flex flex-wrap justify-between gap-3
-    text-xs font-medium text-gray-300 tracking-wide observe">
-    <span id="footer-name"></span>
+    text-xs font-medium text-gray-500 tracking-wide">
+    <span>© <span id="year">2026</span> Márcio Xavier</span>
     <span>Brasília — DF</span>
   </footer>
 
-  <!-- year fallback -->
-  <span id="year" class="hidden"></span>
-
 </div>
 
-<!-- App entry point (ES modules) -->
-<script type="module" src="./assets/js/main.js"></script>
+<!-- Script simples (sem modules): ano do rodapé e animação ao rolar -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.observe').forEach(function (el) {
+      el.classList.add('section-hidden');
+      observer.observe(el);
+    });
+  })();
+</script>
 </body>
 </html>
