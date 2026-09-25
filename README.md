@@ -1,57 +1,34 @@
 # Márcio Xavier — Portfólio Profissional
 
-Currículo online desenvolvido com HTML5, Tailwind CSS e JavaScript modular (ES Modules).
+Currículo online em HTML estático, publicado no GitHub Pages. Sem build, sem módulos e sem `fetch`: todo o conteúdo está no próprio `index.html`, então o site abre até com duplo clique no arquivo.
 
-## 📁 Estrutura do projeto
+## 📁 Estrutura
 
 ```
 /
-├── index.html               # Estrutura base — sem conteúdo hardcoded
-├── data/
-│   └── cv.json              # Todos os dados do currículo (simula uma API)
+├── index.html          # Todo o conteúdo do currículo
 ├── assets/
-│   ├── css/
-│   │   └── style.css        # Animações, skeleton loader e transições
-│   ├── js/
-│   │   ├── main.js          # Entry point — fetch, orquestração e observers
-│   │   ├── render.js        # Funções puras de renderização (HTML a partir de dados)
-│   │   └── icons.js         # Strings SVG reutilizáveis
-│   └── images/              # Foto de perfil e outros assets visuais
+│   ├── css/style.css   # Componentes, animações e estilos de impressão
+│   ├── docs/           # Currículo em PDF (botão "Baixar currículo")
+│   └── images/         # og-image.png para pré-visualização no LinkedIn/WhatsApp
 └── README.md
 ```
 
-## 🚀 Como executar localmente
+## ✏️ Como atualizar
 
-Por usar ES Modules e `fetch`, o projeto precisa de um servidor HTTP local (não funciona via `file://`).
+Edite o texto direto no `index.html`. Para adicionar uma experiência ou projeto, copie um bloco `<article class="card">` existente e troque o conteúdo.
 
-```bash
-# Com Python
-python -m http.server 8080
+## 🚀 Publicação
 
-# Com Node.js (npx)
-npx serve .
+Settings → Pages → Deploy from a branch → `main` / `(root)`. Cada push na `main` atualiza o site em cerca de um minuto.
 
-# Com VS Code
-# Instale a extensão Live Server e clique em "Go Live"
-```
+## 🛠️ Tecnologias
 
-Acesse: `http://localhost:8080`
-
-## ✏️ Como atualizar o currículo
-
-Todo o conteúdo está centralizado em **`data/cv.json`**.  
-Para atualizar experiências, formação, certificações ou competências, edite apenas esse arquivo — sem mexer em HTML ou JavaScript.
-
-## 🛠️ Tecnologias utilizadas
-
-- **HTML5** — estrutura semântica
-- **Tailwind CSS** (CDN) — estilização utilitária e responsividade
-- **JavaScript ES Modules** — organização modular sem build step
-- **Fetch API** — carregamento assíncrono dos dados
-- **IntersectionObserver** — animações de entrada ao fazer scroll
-- **GitHub Pages** — hospedagem
+- HTML5 semântico com dados estruturados schema.org
+- Tailwind CSS (CDN) e CSS próprio
+- JavaScript mínimo (ano do rodapé e animação ao rolar)
+- GitHub Pages
 
 ## 📄 Licença
 
-Desenvolvido por **Márcio Xavier** para fins de portfólio profissional.  
-© 2025 — Todos os direitos reservados.
+Desenvolvido por **Márcio Xavier** para fins de portfólio profissional. © 2026 — Todos os direitos reservados.

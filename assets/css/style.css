@@ -1,63 +1,240 @@
 /* ============================================================
    style.css — Márcio Xavier Portfolio
-   Tailwind via CDN handles utilities; this file handles
-   custom animations, scrollbar, and section transitions.
+   Tailwind (CDN) cuida do layout; este arquivo define os
+   componentes repetidos, para o HTML ficar curto e legível.
    ============================================================ */
 
-/* ── Animations ─────────────────────────────────────────── */
+/* ── Títulos de seção ────────────────────────────────────── */
+.section-title {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2563eb;
+  white-space: nowrap;
+}
+
+/* ── Botões de contato ───────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+}
+.btn:hover {
+  border-color: #60a5fa;
+  color: #2563eb;
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+/* ── Cards de experiência e projeto ──────────────────────── */
+.card {
+  border: 1px solid #f3f4f6;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background: #fff;
+}
+@media (min-width: 640px) { .card { padding: 1.75rem; } }
+
+.card-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.period {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.company {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2563eb;
+  letter-spacing: 0.025em;
+  margin-bottom: 1rem;
+}
+
+/* ── Lista de atividades ─────────────────────────────────── */
+.exp-list {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: #4b5563;
+}
+.exp-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+.exp-list li + li { margin-top: 0.375rem; }
+.exp-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #93c5fd;
+}
+
+/* ── Tags de tecnologia ──────────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tags li {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4b5563;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.375rem;
+}
+.tags-divider {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+/* ── Formação e certificações ────────────────────────────── */
+.edu {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+.edu h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.375;
+  margin-bottom: 0.25rem;
+}
+.edu p {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+.year {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+}
+
+/* ── Competências ────────────────────────────────────────── */
+.skill-hi {
+  background: #eff6ff;
+  border: 2px solid #bfdbfe;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+.skill-hi h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin-bottom: 0.5rem;
+}
+.skill-hi p {
+  font-size: 0.75rem;
+  line-height: 1.625;
+  color: #4b5563;
+}
+.skill-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Foco visível para navegação por teclado ─────────────── */
+a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ── Animações ───────────────────────────────────────────── */
 @keyframes rise {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50%       { opacity: 0.3; }
+  50%      { opacity: 0.3; }
 }
-
 .animate-rise {
   opacity: 0;
-  animation: rise 0.65s ease forwards;
+  animation: rise 0.65s ease 0.05s forwards;
 }
+.dot-blink { animation: blink 2.2s ease infinite; }
 
-.dot-blink {
-  animation: blink 2.2s ease infinite;
+.section-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
-/* ── Staggered delays for sections ──────────────────────── */
-.delay-0  { animation-delay: 0.05s; }
-.delay-1  { animation-delay: 0.15s; }
-.delay-2  { animation-delay: 0.25s; }
-.delay-3  { animation-delay: 0.35s; }
-.delay-4  { animation-delay: 0.45s; }
-.delay-5  { animation-delay: 0.55s; }
+.section-hidden.section-visible {
+  opacity: 1;
+  transform: none;
+}
 
 /* ── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar       { width: 5px; }
 ::-webkit-scrollbar-track { background: #fff; }
 ::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 4px; }
 
-/* ── Loading skeleton ────────────────────────────────────── */
-@keyframes shimmer {
-  0%   { background-position: -600px 0; }
-  100% { background-position: 600px 0; }
+/* ── Menos movimento, quando o sistema pede ──────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-rise, .section-hidden { opacity: 1; transform: none; }
 }
 
-.skeleton {
-  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
-  background-size: 600px 100%;
-  animation: shimmer 1.4s infinite;
-  border-radius: 8px;
-}
-
-/* ── Section fade-in via IntersectionObserver ────────────── */
-.section-hidden {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section-visible {
-  opacity: 1;
-  transform: translateY(0);
+/* ── Impressão: Ctrl+P gera um currículo limpo ───────────── */
+@media print {
+  .dot-blink { display: none; }
+  .section-hidden { opacity: 1; transform: none; }
+  .card, .edu, .skill-hi { break-inside: avoid; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.7em; color: #6b7280; }
 }
