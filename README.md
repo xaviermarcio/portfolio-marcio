@@ -16,7 +16,7 @@ Currículo online em HTML estático, publicado no GitHub Pages. Sem build, sem m
 
 ## ✏️ Como atualizar
 
-Edite o texto direto no `index.html`. Para adicionar uma experiência ou projeto, copie um bloco `<article class="card">` existente e troque o conteúdo.
+Edite o texto direto no `index.html`. Para adicionar uma experiência, copie um bloco `<article class="card">` existente e troque o conteúdo.
 
 ## 🚀 Publicação
 

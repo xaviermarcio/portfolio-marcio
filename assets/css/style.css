@@ -38,7 +38,7 @@
   box-shadow: 0 0 0 3px #dbeafe;
 }
 
-/* ── Cards de experiência e projeto ──────────────────────── */
+/* ── Cards de experiência ──────────────────────── */
 .card {
   border: 1px solid #f3f4f6;
   border-radius: 0.75rem;
@@ -67,16 +67,6 @@
   white-space: nowrap;
 }
 
-.status {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #047857;
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  padding: 0.25rem 0.625rem;
-  border-radius: 9999px;
-  white-space: nowrap;
-}
 
 .company {
   font-size: 0.75rem;

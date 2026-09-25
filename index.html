@@ -65,12 +65,15 @@
     <p class="text-sm font-medium text-gray-500 tracking-wide mb-6">
       Desenvolvimento · Dados · Suporte em TI · Brasília, DF
     </p>
-    <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mb-9">
-      Sou analista de sistemas e trabalho com TI desde 2011, da operação de CPD em rede de supermercados
-      ao desenvolvimento de sistemas web. Hoje atendo lojas de varejo como prestador de serviços: dou suporte
-      a sistemas de PDV e ERP, cuido de hardware e rede e desenvolvo ferramentas em JavaScript, Firebase e
-      Python que automatizam a rotina da operação. Busco oportunidades em desenvolvimento de sistemas,
-      análise de dados ou suporte técnico em TI.
+    <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mb-9 text-justify">
+      Comecei na área de TI resolvendo problemas práticos, lá na loja de um supermercado, dentro do CPD. 
+      É por isso que ainda vejo a tecnologia de um jeito: ela tem que funcionar na hora que o movimento 
+      aperta, nas mãos de quem trabalha no caixa, no estoque e quem gerencia. Em quinze anos de carreira, 
+      passei por suporte e desenvolvimento, trabalhei no setor público e em empresas de terceirização. 
+      Hoje, sou responsável pela tecnologia completa em lojas de varejo, desde os equipamentos no balcão 
+      até os sistemas que eu mesmo desenvolvo para automatizar tarefas repetitivas. Busco uma equipe 
+      onde essa perspectiva de quem entende o negócio de perto possa fazer a diferença, 
+      seja em desenvolvimento, análise de dados ou suporte.
     </p>
 
     <nav class="flex flex-wrap gap-3" aria-label="Contato">
@@ -175,83 +178,6 @@
             <li>Suporte técnico de nível 1 e 2 aos usuários da rede de lojas.</li>
             <li>Suporte à emissão de notas fiscais eletrônicas no sistema Lumi Software.</li>
           </ul>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ══ PROJETOS ════════════════════════════════════════ -->
-    <section class="mb-16 observe" aria-labelledby="h-projects">
-      <div class="flex items-center gap-4 mb-8">
-        <h2 id="h-projects" class="section-title">Projetos</h2>
-        <div class="flex-1 h-px bg-gray-100"></div>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-
-        <article class="card flex flex-col">
-          <div class="card-head">
-            <h3 class="text-base font-bold text-gray-900">La Rose Smart Waste</h3>
-            <span class="status">Em produção</span>
-          </div>
-          <p class="company">Controle de perdas no varejo hortifrúti</p>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">PWA para registrar e acompanhar perdas de mercadoria em duas lojas. Funciona offline, tem autenticação de usuários e um painel administrativo com tabelas comparativas mês a mês, logout por inatividade e backup e recuperação de lotes.</p>
-          <ul class="tags mt-auto" aria-label="Tecnologias">
-            <li>JavaScript</li><li>PWA</li><li>Service Worker</li><li>Firebase</li><li>Firestore</li>
-          </ul>
-        </article>
-
-        <article class="card flex flex-col">
-          <div class="card-head">
-            <h3 class="text-base font-bold text-gray-900">Escala Online</h3>
-            <span class="status">Em produção</span>
-          </div>
-          <p class="company">Escala de trabalho das equipes</p>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">Aplicação web para montar a escala de trabalho: tipos de ausência com arrastar e soltar, gerenciador de turnos, cópia de dias, cálculo de horas extras e feriados, exportação em PDF e layout adaptado ao celular em retrato e paisagem.</p>
-          <ul class="tags mt-auto" aria-label="Tecnologias">
-            <li>JavaScript</li><li>Firebase</li><li>Firebase Hosting</li><li>PDF</li>
-          </ul>
-        </article>
-
-        <article class="card flex flex-col">
-          <div class="card-head">
-            <h3 class="text-base font-bold text-gray-900">Gestor de Boletos</h3>
-            <span class="status">Em produção</span>
-          </div>
-          <p class="company">Automação financeira</p>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">Sistema que lê boletos e notas em PDF, extrai os dados com OCR, valida a linha digitável pelo Módulo 10 e gera lembretes de pagamento prontos para enviar pelo WhatsApp.</p>
-          <ul class="tags mt-auto" aria-label="Tecnologias">
-            <li>Python</li><li>FastAPI</li><li>Tesseract OCR</li><li>pdfplumber</li><li>Firestore</li><li>PWA</li>
-          </ul>
-        </article>
-
-        <article class="card flex flex-col">
-          <div class="card-head">
-            <h3 class="text-base font-bold text-gray-900">Editor de Pedidos</h3>
-            <span class="status">Em produção</span>
-          </div>
-          <p class="company">Compras com fornecedores</p>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">PWA que roda na rede local da loja: lê os PDFs enviados pelos fornecedores e gera o pedido de compra em PDF. Inclui um instalador que verifica o Python, cria o ambiente virtual, resolve conflito de porta e detecta o IP da máquina automaticamente.</p>
-          <ul class="tags mt-auto" aria-label="Tecnologias">
-            <li>Python</li><li>FastAPI</li><li>PWA</li><li>PDF</li><li>Automação</li>
-          </ul>
-        </article>
-
-        <article class="card flex flex-col sm:col-span-2">
-          <div class="card-head">
-            <h3 class="text-base font-bold text-gray-900">Consulta CEP</h3>
-            <span class="status">Código aberto</span>
-          </div>
-          <p class="company">Projeto de estudo</p>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">PWA de consulta de endereços pela API ViaCEP, com consulta em lote, exportação para CSV, skeleton loaders e notificações.</p>
-          <ul class="tags" aria-label="Tecnologias">
-            <li>JavaScript</li><li>PWA</li><li>API REST</li><li>CSV</li>
-          </ul>
-          <!-- Troque pelo link direto do repositório -->
-          <a href="https://github.com/xaviermarcio" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-blue-600 hover:underline">
-            Ver no GitHub
-          </a>
         </article>
 
       </div>
